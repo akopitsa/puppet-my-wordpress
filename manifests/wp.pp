@@ -22,7 +22,7 @@ class wordpress::wp {
     }
 
     # Generate the wp-config.php file using the template
-    file { '/var/www/wp-config.php':
+    file { '/var/www/html/wp-config.php':
         ensure => present,
         require => Exec['copy'],
         content => template("wordpress/wp-config-sample.php.erb")
