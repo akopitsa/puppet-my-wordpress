@@ -27,4 +27,9 @@ class wordpress::wp {
         require => Exec['copy'],
         content => template("wordpress/wp-config-sample.php.erb")
     }
+
+    exec {'/var/www/html/index.html':
+        ensure => absent,
+        onlyif => '/usr/bin/test -f /var/www/html/index.html'
+    }
 }
