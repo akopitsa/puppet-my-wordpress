@@ -30,6 +30,5 @@ class wordpress::wp {
 
     file {'/var/www/html/index.html':
         ensure => absent,
-        onlyif => '/usr/bin/test -f /var/www/html/index.html'
     }
 }
