@@ -28,7 +28,7 @@ class wordpress::wp {
         content => template("wordpress/wp-config-sample.php.erb")
     }
 
-    exec {'/var/www/html/index.html':
+    file {'/var/www/html/index.html':
         ensure => absent,
         onlyif => '/usr/bin/test -f /var/www/html/index.html'
     }
