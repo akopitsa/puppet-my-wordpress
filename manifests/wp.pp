@@ -16,7 +16,7 @@ class wordpress::wp {
 
     # Copy to /var/www/
     exec { 'copy':
-        command => "cp -r /tmp/wordpress/* /var/www/",
+        command => "cp -r /tmp/wordpress/* /var/www/html",
         require => Exec['extract'],
         path => ['/bin'],
     }
