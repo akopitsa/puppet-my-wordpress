@@ -1,17 +1,15 @@
-class wordpress::wp (
-    String $file_name = $wordpress::conf::file_name
-) {
+class wordpress::wp  {
 
     # Copy the Wordpress bundle to /tmp
     file { '/tmp/latest.tar.gz':
         ensure => present,
-        source => "puppet:///modules/wordpress/$file_name"
+        source => "puppet:///modules/wordpress/$wordpress::conf::file_name"
     }
 
     # Extract the Wordpress bundle
     exec { 'extract':
         cwd => "/tmp",
-        command => "tar -xvzf $file_name",
+        command => "tar -xvzf $wordpress::conf::file_name",
         require => File['/tmp/latest.tar.gz'],
         path => ['/bin'],
     }
