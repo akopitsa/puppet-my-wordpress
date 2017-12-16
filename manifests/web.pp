@@ -3,4 +3,5 @@ class wordpress::web () {
     mpm_module => prefork
   }
   class { '::apache::mod::php': }
+
 }
