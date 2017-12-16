@@ -1,5 +1,5 @@
 class wordpress::wp (
-    String $file_name = $wordpress::file_name
+    String $file_name = $wordpress::conf::file_name
 ) {
 
     # Copy the Wordpress bundle to /tmp

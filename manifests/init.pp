@@ -1,5 +1,5 @@
 class wordpress (
-    String $file_name = $wordpress::conf::file_name
+    String $file_name = $wordpress::conf::file_name,
 ) {
     # Load all variables
     class { 'wordpress::conf': }
