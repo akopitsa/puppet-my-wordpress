@@ -4,7 +4,7 @@ class wordpress::conf {
   $db_user = 'wp'
   $db_user_password = 'password'
   $db_host = 'localhost'
-#  $file_name = "latest.tar.gz"
+  $file_name = "latest.tar.gz"
   $db_user_host = "${db_user}@${db_host}"
   $db_user_host_db = "${db_user}@${db_host}/${db_name}.*"
 }
