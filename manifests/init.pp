@@ -19,9 +19,9 @@ class wordpress {
     }
 
     # Display this message after Apache installation is complete
-    notify { 'Apache Installation Complete':
-        require => Class['wordpress::web']
-    }
+#    notify { 'Apache Installation Complete':
+#        require => Class['wordpress::web']
+#    }
 
     # Display this message after Wordpress installation is complete
     notify { 'Wordpress Installation Complete':
