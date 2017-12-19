@@ -24,8 +24,8 @@ class wordpress {
 #    }
 
     # Display this message after Wordpress installation is complete
-    notify { 'Wordpress Installation Complete':
-        require => Class['wordpress::wp']
-    }
+#    notify { 'Wordpress Installation Complete':
+#        require => Class['wordpress::wp']
+#    }
 
 }
