@@ -3,7 +3,7 @@ class wordpress {
     class { 'wordpress::conf': }
 
     # Install Apache and PHP
-    class { 'wordpress::web': }
+#    class { 'wordpress::web': }
 
     # Install MySQL
     class { 'wordpress::db': }
