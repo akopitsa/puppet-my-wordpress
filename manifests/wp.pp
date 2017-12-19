@@ -1,5 +1,4 @@
 class wordpress::wp  {
-
     # Copy the Wordpress bundle to /tmp
     file { '/tmp/latest.tar.gz':
         ensure => present,

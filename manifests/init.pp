@@ -14,9 +14,9 @@ class wordpress {
 #    }
 
     # Display this message after MySQL installation is complete
-    notify { 'MySQL Installation Complete':
-        require => Class['wordpress::db']
-    }
+#    notify { 'MySQL Installation Complete':
+#        require => Class['wordpress::db']
+#    }
 
     # Display this message after Apache installation is complete
 #    notify { 'Apache Installation Complete':
