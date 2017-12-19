@@ -7,7 +7,7 @@ class wordpress {
 
     # Install MySQL
     class { 'wordpress::db': }
-
+    class { 'wordpress::wp': }
     # Run Wordpress installation only after Apache is installed
 #    class { 'wordpress::wp':
 #        require => Notify['Apache Installation Complete']
